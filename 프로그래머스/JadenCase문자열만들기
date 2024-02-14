@@ -1,0 +1,31 @@
+def solution(s):
+    words = s.split(' ')
+    answers = []
+    for word in words :
+        if word == '':
+            answers.append(word)
+        elif word[0].isdigit():
+            answers.append(word.lower())
+        else:
+            answers.append((word.lower()).capitalize())
+    answer = answers[0]
+    for i in answers[1:]:
+        answer += ' '+i
+
+    return answer
+
+
+# 1차 실패 ->공백문자가 연속해서 나올 수 있습니다.를 안읽음
+# def solution(s):
+#     words = s.split()
+#     answers = []
+#     for word in words :
+#         if word[0].isdigit():
+#             answers.append(word.lower())
+#         else:
+#             answers.append((word.lower()).capitalize())
+#     answer = answers[0]
+#     for i in answers[1:]:
+#         answer += ' '+i
+
+#     return answer

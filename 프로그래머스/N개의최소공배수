@@ -1,0 +1,11 @@
+def solution(arr):
+    LCM = arr[0]
+    for i in arr:
+        temp = LCM
+        while 1:
+            if LCM % i != 0:
+                LCM += temp
+            else:
+                break
+
+    return LCM
